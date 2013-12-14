@@ -7,6 +7,7 @@ import android.util.Log;
 import com.littlefluffytoys.littlefluffylocationlibrary.LocationLibrary;
 import com.parse.Parse;
 import com.parse.ParseObject;
+import com.testflightapp.lib.TestFlight;
 
 public class Application extends android.app.Application {
   // Debugging switch
@@ -27,6 +28,10 @@ public class Application extends android.app.Application {
   public void onCreate() {
     super.onCreate();
 
+    
+  //Initialize TestFlight with your app token.
+    TestFlight.takeOff(this, "18afa9a9-6d6a-4769-95c5-2d00541ae758");
+    
     ParseObject.registerSubclass(AnywallPost.class);
    /* Parse.initialize(this, "YOUR_PARSE_APPLICATION_ID",
         "YOUR_PARSE_CLIENT_KEY");*/
