@@ -298,14 +298,14 @@ public class MainActivity extends FragmentActivity implements LocationListener,
    */
   @Override
   public void onStop() {
-    // If the client is connected
+   /* // If the client is connected
     if (locationClient.isConnected()) {
       stopPeriodicUpdates();
     }
 
     // After disconnect() is called, the client is considered "dead".
     locationClient.disconnect();
-
+*/
     super.onStop();
   }
 
